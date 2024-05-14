@@ -43,16 +43,22 @@ namespace kurs
             InitializeComponent();
         }
 
-        private void label1_Click(object sender, EventArgs e)
+        private void butShowInst_Click(object sender, EventArgs e)
+        {
+                instruments r = new instruments(this);
+                r.Show();
+                this.Hide();
+        }
+
+        private void bntShowClien_Click(object sender, EventArgs e)
         {
             throw new System.NotImplementedException();
         }
 
-        private void label1_Click_1(object sender, EventArgs e)
+        private void button3_Click(object sender, EventArgs e)
         {
             throw new System.NotImplementedException();
         }
-        
         
     }
 }

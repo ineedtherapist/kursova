@@ -141,6 +141,12 @@
         <Compile Include="enter.Designer.cs">
             <DependentUpon>enter.cs</DependentUpon>
         </Compile>
+        <Compile Include="instruments.cs">
+          <SubType>Form</SubType>
+        </Compile>
+        <Compile Include="instruments.Designer.cs">
+          <DependentUpon>instruments.cs</DependentUpon>
+        </Compile>
         <Compile Include="Program.cs"/>
         <Compile Include="Properties\AssemblyInfo.cs"/>
         <Compile Include="Rentals.cs">
@@ -184,7 +190,6 @@
       <Content Include="libmongocrypt.so" />
       <Content Include="mongocrypt.dll" />
       <Content Include="Resources\illustration.png" />
-      <Content Include="Resources\_5735456.png" />
     </ItemGroup>
     <ItemGroup>
       <Analyzer Include="..\packages\AWSSDK.SecurityToken.3.7.100.14\analyzers\dotnet\cs\AWSSDK.SecurityToken.CodeAnalysis.dll" />

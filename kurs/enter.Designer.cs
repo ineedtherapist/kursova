@@ -40,9 +40,9 @@
             this.label1.Cursor = System.Windows.Forms.Cursors.Arrow;
             this.label1.Font = new System.Drawing.Font("Dubai", 16.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.Color.DarkOrange;
-            this.label1.Location = new System.Drawing.Point(100, 67);
+            this.label1.Location = new System.Drawing.Point(70, 52);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(410, 99);
+            this.label1.Size = new System.Drawing.Size(464, 116);
             this.label1.TabIndex = 1;
             this.label1.Text = "Система для оренди \r\nбудівельних інструментів";
             this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
