@@ -157,7 +157,6 @@ namespace kurs
             this.Name = "Rentals";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Оренди";
-            this.Load += new System.EventHandler(this.Rentals_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.ResumeLayout(false);
         }

@@ -76,10 +76,6 @@ namespace kurs
         {
             throw new System.NotImplementedException();
         }
-
-        private void Rentals_Load(object sender, EventArgs e)
-        {
-            throw new System.NotImplementedException();
-        }
+        
     }
 }
