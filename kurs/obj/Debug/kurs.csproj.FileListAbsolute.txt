@@ -62,3 +62,5 @@ C:\Users\Lenovo\Desktop\kurs\kurs\obj\Debug\kurs.csproj.CoreCompileInputs.cache
 C:\Users\Lenovo\Desktop\kurs\kurs\obj\Debug\kurs.csproj.CopyComplete
 C:\Users\Lenovo\Desktop\kurs\kurs\obj\Debug\kurs.exe
 C:\Users\Lenovo\Desktop\kurs\kurs\obj\Debug\kurs.pdb
+C:\Users\Lenovo\Desktop\kurs\kurs\obj\Debug\kurs.instruments.resources
+C:\Users\Lenovo\Desktop\kurs\kurs\obj\Debug\kurs.Clients.resources
