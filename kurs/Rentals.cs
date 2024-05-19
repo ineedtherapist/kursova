@@ -8,46 +8,30 @@ namespace kurs
 {
     public partial class Rentals : Form
     {
-        public enter en;
-        public Rentals(enter e)
-        {
-            en = e;
-            InitializeComponent();
-        }
-        
-        public instruments rr;
-        public Rentals(instruments inst)
-        {
-            rr = inst;
-            InitializeComponent();
-        }
-        
-        public Clients rrr;
-        public Rentals(Clients clie)
-        {
-            rrr = clie;
-            InitializeComponent();
-        }
-        
+        public Enter en;
+        // public Instruments rr;
+        // public Clients rrr;
+
         private MongoClient client;
         private IMongoDatabase db;
         private IMongoCollection<Rental> collection;
-        
-        const string connectionString = "mongodb+srv://viktor:<password>@clustr.sc8jicj.mongodb.net/?retryWrites=true&w=majority&appName=clustr";
-        
+
+        const string connectionString = "mongodb+srv://v:qwe12@cluster0.fm9se2l.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0";
 
         public class Rental
         {
             [BsonId]
             [BsonRepresentation(BsonType.ObjectId)]
             public string Id { get; set; }
+
             public string InstName { get; set; }
             public string ClientName { get; set; }
             public string Date_start { get; set; }
             public string Data_end { get; set; }
             public string Price { get; set; }
-            
-            public Rental(string id, string instName, string clientName, string date_start, string data_end, string price)
+
+            public Rental(string id, string instName, string clientName, string date_start, string data_end,
+                string price)
             {
                 this.Id = id;
                 this.InstName = instName;
@@ -57,18 +41,31 @@ namespace kurs
                 this.Price = price;
             }
         }
-        
+
+        public Rentals(Enter e /*, Instruments inst, Clients clie*/)
+        {
+            client = new MongoClient(connectionString);
+            db = client.GetDatabase("kurs");
+            collection = db.GetCollection<Rental>("rentals");
+
+            InitializeComponent();
+            en = e;
+            // rr = inst;
+            // rrr = clie;
+        }
+    
+
         private void butShowInst_Click(object sender, EventArgs e)
         {
-                instruments r = new instruments(this);
-                r.Show();
+                Instruments i = new Instruments(this);
+                i.Show();
                 this.Hide();
         }
 
         private void bntShowClien_Click(object sender, EventArgs e)
         {
-            Clients r = new Clients(this);
-            r.Show();
+            Clients c = new Clients(this);
+            c.Show();
             this.Hide();
         }
 

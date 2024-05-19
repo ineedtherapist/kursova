@@ -141,17 +141,17 @@
         <Compile Include="Clients.Designer.cs">
           <DependentUpon>Clients.cs</DependentUpon>
         </Compile>
-        <Compile Include="enter.cs">
+        <Compile Include="Enter.cs">
             <SubType>Form</SubType>
         </Compile>
-        <Compile Include="enter.Designer.cs">
-            <DependentUpon>enter.cs</DependentUpon>
+        <Compile Include="Enter.Designer.cs">
+            <DependentUpon>Enter.cs</DependentUpon>
         </Compile>
-        <Compile Include="instruments.cs">
+        <Compile Include="Instruments.cs">
           <SubType>Form</SubType>
         </Compile>
-        <Compile Include="instruments.Designer.cs">
-          <DependentUpon>instruments.cs</DependentUpon>
+        <Compile Include="Instruments.Designer.cs">
+          <DependentUpon>Instruments.cs</DependentUpon>
         </Compile>
         <Compile Include="Program.cs"/>
         <Compile Include="Properties\AssemblyInfo.cs"/>
@@ -164,11 +164,11 @@
         <EmbeddedResource Include="Clients.resx">
           <DependentUpon>Clients.cs</DependentUpon>
         </EmbeddedResource>
-        <EmbeddedResource Include="enter.resx">
-          <DependentUpon>enter.cs</DependentUpon>
+        <EmbeddedResource Include="Enter.resx">
+          <DependentUpon>Enter.cs</DependentUpon>
         </EmbeddedResource>
-        <EmbeddedResource Include="instruments.resx">
-          <DependentUpon>instruments.cs</DependentUpon>
+        <EmbeddedResource Include="Instruments.resx">
+          <DependentUpon>Instruments.cs</DependentUpon>
         </EmbeddedResource>
         <EmbeddedResource Include="Properties\Resources.resx">
             <Generator>ResXFileCodeGenerator</Generator>

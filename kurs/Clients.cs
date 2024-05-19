@@ -5,12 +5,6 @@ namespace kurs
 {
     public partial class Clients : Form
     {
-       
-        public Clients()
-        {
-            InitializeComponent();
-        }
-
         public Clients(Rentals ren)
         {
             r = ren;
@@ -19,9 +13,9 @@ namespace kurs
         public Rentals r;
         private void btngoback2_Click(object sender, EventArgs e)
         {
-            this.Hide();
-            Rentals r = new Rentals(this);
-            r.Show();
+            // this.Hide();
+            // Rentals r = new Rentals(this);
+            // r.Show();
         }
 
         private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)

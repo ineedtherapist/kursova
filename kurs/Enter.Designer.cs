@@ -1,6 +1,6 @@
 ﻿namespace kurs
 {
-    partial class enter
+    partial class Enter
     {
         /// <summary>
         /// Required designer variable.
@@ -82,7 +82,7 @@
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.Location = new System.Drawing.Point(15, 15);
             this.MaximizeBox = false;
-            this.Name = "enter";
+            this.Name = "Enter";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Вхід";
             this.ResumeLayout(false);
