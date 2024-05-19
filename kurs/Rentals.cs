@@ -42,7 +42,7 @@ namespace kurs
             }
         }
 
-        public Rentals(Enter e /*, Instruments inst, Clients clie*/)
+        public Rentals(Enter e , Instruments inst, Clients clie)
         {
             client = new MongoClient(connectionString);
             db = client.GetDatabase("kurs");

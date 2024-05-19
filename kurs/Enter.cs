@@ -1,11 +1,4 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace kurs
@@ -19,7 +12,7 @@ namespace kurs
 
         private void button1_Click(object sender, EventArgs e)
         {
-            Rentals r = new Rentals(this);
+            Rentals r = new Rentals(this, null, null);
             r.Show();
             this.Hide();
         }

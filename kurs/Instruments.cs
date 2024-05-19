@@ -71,9 +71,9 @@ namespace kurs
 
         private void btngoback_Click(object sender, EventArgs e)
         {
-            // this.Hide();
-            // Rentals r = new Rentals(null, this, null);
-            // r.Show();
+            this.Hide();
+            Rentals r = new Rentals(null, this, null);
+            r.Show();
         }
 
         private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
