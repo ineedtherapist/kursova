@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections.Generic;
 using System.Windows.Forms;
 using MongoDB.Bson;
 using MongoDB.Bson.Serialization.Attributes;
@@ -9,8 +10,6 @@ namespace kurs
     public partial class Rentals : Form
     {
         public Enter en;
-        // public Instruments rr;
-        // public Clients rrr;
 
         private MongoClient client;
         private IMongoDatabase db;
@@ -27,31 +26,58 @@ namespace kurs
             public string InstName { get; set; }
             public string ClientName { get; set; }
             public string Date_start { get; set; }
-            public string Data_end { get; set; }
+            public string Date_end { get; set; }
             public string Price { get; set; }
 
-            public Rental(string id, string instName, string clientName, string date_start, string data_end,
+            public Rental(string id, string instName, string clientName, string date_start, string date_end,
                 string price)
             {
                 this.Id = id;
                 this.InstName = instName;
                 this.ClientName = clientName;
                 this.Date_start = date_start;
-                this.Data_end = data_end;
+                this.Date_end = date_end;
                 this.Price = price;
             }
+            
+            
         }
 
         public Rentals(Enter e , Instruments inst, Clients clie)
         {
+            InitializeComponent();
+            en = e;
+            
             client = new MongoClient(connectionString);
             db = client.GetDatabase("kurs");
             collection = db.GetCollection<Rental>("rentals");
+            
+            RefreshRentals();
 
-            InitializeComponent();
-            en = e;
-            // rr = inst;
-            // rrr = clie;
+            rentalDataGrid.Columns["Id"].Visible = false;
+
+            Dictionary<string, string> columnHeaders = new Dictionary<string, string>
+            {
+                { "InstName", "Назва інструмента" },
+                { "ClientName", "Імя та прізвище клієнта" },
+                { "Date_start", "Початок оренди" },
+                { "Date_end", "Кінець оренди" },
+                { "Price", "Ціна" }
+            };
+
+            foreach (var columnHeader in columnHeaders)
+            {
+                if (rentalDataGrid.Columns.Contains(columnHeader.Key))
+                {
+                    rentalDataGrid.Columns[columnHeader.Key].HeaderText = columnHeader.Value;
+                }
+            }
+        }
+        
+        public void RefreshRentals()
+        {
+            var rentals = collection.Find(new BsonDocument()).ToList();
+            rentalDataGrid.DataSource = rentals;
         }
     
 

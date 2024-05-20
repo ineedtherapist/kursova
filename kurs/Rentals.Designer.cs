@@ -32,13 +32,13 @@ namespace kurs
         private void InitializeComponent()
         {
             this.label1 = new System.Windows.Forms.Label();
-            this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.rentalDataGrid = new System.Windows.Forms.DataGridView();
             this.button3 = new System.Windows.Forms.Button();
             this.button4 = new System.Windows.Forms.Button();
             this.button1 = new System.Windows.Forms.Button();
             this.butShowInst = new System.Windows.Forms.Button();
             this.butShowClin = new System.Windows.Forms.Button();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.rentalDataGrid)).BeginInit();
             this.SuspendLayout();
             // 
             // label1
@@ -54,16 +54,16 @@ namespace kurs
             this.label1.Text = "Інструменти доступні для оренди :";
             this.label1.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
             // 
-            // dataGridView1
+            // rentalDataGrid
             // 
-            this.dataGridView1.AllowUserToOrderColumns = true;
-            this.dataGridView1.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(221)))), ((int)(((byte)(218)))), ((int)(((byte)(196)))));
-            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Location = new System.Drawing.Point(12, 78);
-            this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.RowTemplate.Height = 24;
-            this.dataGridView1.Size = new System.Drawing.Size(756, 432);
-            this.dataGridView1.TabIndex = 1;
+            this.rentalDataGrid.AllowUserToOrderColumns = true;
+            this.rentalDataGrid.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(221)))), ((int)(((byte)(218)))), ((int)(((byte)(196)))));
+            this.rentalDataGrid.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.rentalDataGrid.Location = new System.Drawing.Point(12, 78);
+            this.rentalDataGrid.Name = "rentalDataGrid";
+            this.rentalDataGrid.RowTemplate.Height = 24;
+            this.rentalDataGrid.Size = new System.Drawing.Size(756, 432);
+            this.rentalDataGrid.TabIndex = 1;
             // 
             // button3
             // 
@@ -150,14 +150,14 @@ namespace kurs
             this.Controls.Add(this.button1);
             this.Controls.Add(this.button4);
             this.Controls.Add(this.button3);
-            this.Controls.Add(this.dataGridView1);
+            this.Controls.Add(this.rentalDataGrid);
             this.Controls.Add(this.label1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.MaximizeBox = false;
             this.Name = "Rentals";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Оренди";
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.rentalDataGrid)).EndInit();
             this.ResumeLayout(false);
         }
 
@@ -171,7 +171,7 @@ namespace kurs
         private System.Windows.Forms.Button button3;
 
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.DataGridView dataGridView1;
+        private System.Windows.Forms.DataGridView rentalDataGrid;
 
         #endregion
     }
