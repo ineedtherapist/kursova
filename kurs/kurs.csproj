@@ -138,6 +138,12 @@
         </Reference>
     </ItemGroup>
     <ItemGroup>
+        <Compile Include="AddClient.cs">
+          <SubType>Form</SubType>
+        </Compile>
+        <Compile Include="AddClient.Designer.cs">
+          <DependentUpon>AddClient.cs</DependentUpon>
+        </Compile>
         <Compile Include="addInstrument.cs">
           <SubType>Form</SubType>
         </Compile>
@@ -170,6 +176,9 @@
         <Compile Include="Rentals.Designer.cs">
           <DependentUpon>Rentals.cs</DependentUpon>
         </Compile>
+        <EmbeddedResource Include="AddClient.resx">
+          <DependentUpon>AddClient.cs</DependentUpon>
+        </EmbeddedResource>
         <EmbeddedResource Include="addInstrument.resx">
           <DependentUpon>addInstrument.cs</DependentUpon>
         </EmbeddedResource>

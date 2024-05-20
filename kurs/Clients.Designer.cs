@@ -34,7 +34,7 @@ namespace kurs
             this.btngoback2 = new System.Windows.Forms.Button();
             this.button1 = new System.Windows.Forms.Button();
             this.button4 = new System.Windows.Forms.Button();
-            this.button3 = new System.Windows.Forms.Button();
+            this.addCliebtn = new System.Windows.Forms.Button();
             this.clientDataGrid = new System.Windows.Forms.DataGridView();
             this.label1 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.clientDataGrid)).BeginInit();
@@ -84,19 +84,20 @@ namespace kurs
             this.button4.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
             this.button4.UseVisualStyleBackColor = false;
             // 
-            // button3
+            // addCliebtn
             // 
-            this.button3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(250)))), ((int)(((byte)(137)))), ((int)(((byte)(19)))));
-            this.button3.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.button3.Font = new System.Drawing.Font("Dubai Medium", 7F, System.Drawing.FontStyle.Bold);
-            this.button3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(225)))), ((int)(((byte)(222)))), ((int)(((byte)(203)))));
-            this.button3.Location = new System.Drawing.Point(12, 516);
-            this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(182, 31);
-            this.button3.TabIndex = 16;
-            this.button3.Text = "Додати клієнта";
-            this.button3.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
-            this.button3.UseVisualStyleBackColor = false;
+            this.addCliebtn.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(250)))), ((int)(((byte)(137)))), ((int)(((byte)(19)))));
+            this.addCliebtn.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.addCliebtn.Font = new System.Drawing.Font("Dubai Medium", 7F, System.Drawing.FontStyle.Bold);
+            this.addCliebtn.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(225)))), ((int)(((byte)(222)))), ((int)(((byte)(203)))));
+            this.addCliebtn.Location = new System.Drawing.Point(12, 516);
+            this.addCliebtn.Name = "addCliebtn";
+            this.addCliebtn.Size = new System.Drawing.Size(182, 31);
+            this.addCliebtn.TabIndex = 16;
+            this.addCliebtn.Text = "Додати клієнта";
+            this.addCliebtn.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
+            this.addCliebtn.UseVisualStyleBackColor = false;
+            this.addCliebtn.Click += new System.EventHandler(this.addCliebtn_Click);
             // 
             // clientDataGrid
             // 
@@ -108,7 +109,6 @@ namespace kurs
             this.clientDataGrid.RowTemplate.Height = 24;
             this.clientDataGrid.Size = new System.Drawing.Size(756, 432);
             this.clientDataGrid.TabIndex = 15;
-            this.clientDataGrid.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick);
             // 
             // label1
             // 
@@ -133,7 +133,7 @@ namespace kurs
             this.Controls.Add(this.btngoback2);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.button4);
-            this.Controls.Add(this.button3);
+            this.Controls.Add(this.addCliebtn);
             this.Controls.Add(this.clientDataGrid);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.MaximizeBox = false;
@@ -147,7 +147,7 @@ namespace kurs
         private System.Windows.Forms.Button btngoback2;
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.Button button4;
-        private System.Windows.Forms.Button button3;
+        private System.Windows.Forms.Button addCliebtn;
         private System.Windows.Forms.DataGridView clientDataGrid;
         private System.Windows.Forms.Label label1;
 

@@ -75,10 +75,11 @@ namespace kurs
             Rentals r = new Rentals(null, null, this);
             r.Show();
         }
-
-        private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        
+        private void addCliebtn_Click(object sender, EventArgs e)
         {
-            throw new System.NotImplementedException();
+            AddClient cl = new AddClient(this);
+            cl.ShowDialog();
         }
     }
 }

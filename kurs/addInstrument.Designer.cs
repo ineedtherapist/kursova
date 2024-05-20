@@ -46,7 +46,7 @@ namespace kurs
             this.AddInstBtn.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.AddInstBtn.Font = new System.Drawing.Font("Dubai Medium", 7F, System.Drawing.FontStyle.Bold);
             this.AddInstBtn.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(225)))), ((int)(((byte)(222)))), ((int)(((byte)(203)))));
-            this.AddInstBtn.Location = new System.Drawing.Point(101, 138);
+            this.AddInstBtn.Location = new System.Drawing.Point(109, 141);
             this.AddInstBtn.Name = "AddInstBtn";
             this.AddInstBtn.Size = new System.Drawing.Size(159, 36);
             this.AddInstBtn.TabIndex = 0;
@@ -121,6 +121,8 @@ namespace kurs
             this.Controls.Add(this.labl2);
             this.Controls.Add(this.labl3);
             this.Controls.Add(this.AddInstBtn);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
+            this.MaximizeBox = false;
             this.Name = "addInstrument";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Додати інструмент";

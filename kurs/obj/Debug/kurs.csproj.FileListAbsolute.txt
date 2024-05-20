@@ -67,3 +67,4 @@ C:\Users\Lenovo\Desktop\kurs\kurs\obj\Debug\kurs.Clients.resources
 C:\Users\Lenovo\Desktop\kurs\kurs\bin\Debug\Microsoft.Extensions.DependencyInjection.Abstractions.dll
 C:\Users\Lenovo\Desktop\kurs\kurs\bin\Debug\Microsoft.Extensions.DependencyInjection.Abstractions.xml
 C:\Users\Lenovo\Desktop\kurs\kurs\obj\Debug\kurs.addInstrument.resources
+C:\Users\Lenovo\Desktop\kurs\kurs\obj\Debug\kurs.AddClient.resources
