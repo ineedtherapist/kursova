@@ -22,24 +22,21 @@ namespace kurs
             [BsonId]
             [BsonRepresentation(BsonType.ObjectId)]
             public string Id { get; set; }
-
             public string InstName { get; set; }
             public string ClientName { get; set; }
+            public string Price { get; set; }
             public string Date_start { get; set; }
             public string Date_end { get; set; }
-            public string Price { get; set; }
 
-            public Rental(string id, string instName, string clientName, string date_start, string date_end,
-                string price)
+            public Rental(string id, string instName, string clientName, string price, string date_start, string date_end)
             {
                 this.Id = id;
                 this.InstName = instName;
                 this.ClientName = clientName;
+                this.Price = price;
                 this.Date_start = date_start;
                 this.Date_end = date_end;
-                this.Price = price;
             }
-            
             
         }
 
@@ -58,11 +55,11 @@ namespace kurs
 
             Dictionary<string, string> columnHeaders = new Dictionary<string, string>
             {
+                { "ClientName", "Ім'я клієнта" },
                 { "InstName", "Назва інструмента" },
-                { "ClientName", "Імя та прізвище клієнта" },
+                { "Price", "Ціна"},
                 { "Date_start", "Початок оренди" },
-                { "Date_end", "Кінець оренди" },
-                { "Price", "Ціна" }
+                { "Date_end", "Кінець оренди" }
             };
 
             foreach (var columnHeader in columnHeaders)

@@ -33,7 +33,7 @@ namespace kurs
         {
             this.button1 = new System.Windows.Forms.Button();
             this.button4 = new System.Windows.Forms.Button();
-            this.button3 = new System.Windows.Forms.Button();
+            this.btnAddInstr = new System.Windows.Forms.Button();
             this.instrDataGrid = new System.Windows.Forms.DataGridView();
             this.label1 = new System.Windows.Forms.Label();
             this.btngoback = new System.Windows.Forms.Button();
@@ -70,20 +70,20 @@ namespace kurs
             this.button4.UseVisualStyleBackColor = false;
             this.button4.Click += new System.EventHandler(this.button4_Click);
             // 
-            // button3
+            // btnAddInstr
             // 
-            this.button3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(250)))), ((int)(((byte)(137)))), ((int)(((byte)(19)))));
-            this.button3.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.button3.Font = new System.Drawing.Font("Dubai Medium", 7F, System.Drawing.FontStyle.Bold);
-            this.button3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(225)))), ((int)(((byte)(222)))), ((int)(((byte)(203)))));
-            this.button3.Location = new System.Drawing.Point(12, 516);
-            this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(182, 31);
-            this.button3.TabIndex = 9;
-            this.button3.Text = "Додати інструмент";
-            this.button3.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
-            this.button3.UseVisualStyleBackColor = false;
-            this.button3.Click += new System.EventHandler(this.button3_Click);
+            this.btnAddInstr.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(250)))), ((int)(((byte)(137)))), ((int)(((byte)(19)))));
+            this.btnAddInstr.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.btnAddInstr.Font = new System.Drawing.Font("Dubai Medium", 7F, System.Drawing.FontStyle.Bold);
+            this.btnAddInstr.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(225)))), ((int)(((byte)(222)))), ((int)(((byte)(203)))));
+            this.btnAddInstr.Location = new System.Drawing.Point(12, 516);
+            this.btnAddInstr.Name = "btnAddInstr";
+            this.btnAddInstr.Size = new System.Drawing.Size(182, 31);
+            this.btnAddInstr.TabIndex = 9;
+            this.btnAddInstr.Text = "Додати інструмент";
+            this.btnAddInstr.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
+            this.btnAddInstr.UseVisualStyleBackColor = false;
+            this.btnAddInstr.Click += new System.EventHandler(this.btnAddInstr_Click);
             // 
             // instrDataGrid
             // 
@@ -125,7 +125,7 @@ namespace kurs
             this.btngoback.UseVisualStyleBackColor = false;
             this.btngoback.Click += new System.EventHandler(this.btngoback_Click);
             // 
-            // instruments
+            // Instruments
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -134,7 +134,7 @@ namespace kurs
             this.Controls.Add(this.btngoback);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.button4);
-            this.Controls.Add(this.button3);
+            this.Controls.Add(this.btnAddInstr);
             this.Controls.Add(this.instrDataGrid);
             this.Controls.Add(this.label1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
@@ -150,7 +150,7 @@ namespace kurs
 
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.Button button4;
-        private System.Windows.Forms.Button button3;
+        private System.Windows.Forms.Button btnAddInstr;
         private System.Windows.Forms.DataGridView instrDataGrid;
         private System.Windows.Forms.Label label1;
 
