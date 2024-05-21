@@ -14,6 +14,7 @@ namespace kurs
         private MongoClient client;
         private IMongoDatabase db;
         private IMongoCollection<Rental> collection;
+        
 
         const string connectionString = "mongodb+srv://v:qwe12@cluster0.fm9se2l.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0";
 
@@ -92,10 +93,10 @@ namespace kurs
             this.Hide();
         }
 
-        private void button3_Click(object sender, EventArgs e)
+        private void addRentalBtn_Click(object sender, EventArgs e)
         {
-            throw new System.NotImplementedException();
+            addRental re = new addRental(this);
+            re.ShowDialog();
         }
-        
     }
 }

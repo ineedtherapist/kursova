@@ -33,7 +33,7 @@ namespace kurs
         {
             this.label1 = new System.Windows.Forms.Label();
             this.rentalDataGrid = new System.Windows.Forms.DataGridView();
-            this.button3 = new System.Windows.Forms.Button();
+            this.addRentalBtn = new System.Windows.Forms.Button();
             this.button4 = new System.Windows.Forms.Button();
             this.button1 = new System.Windows.Forms.Button();
             this.butShowInst = new System.Windows.Forms.Button();
@@ -65,20 +65,20 @@ namespace kurs
             this.rentalDataGrid.Size = new System.Drawing.Size(756, 432);
             this.rentalDataGrid.TabIndex = 1;
             // 
-            // button3
+            // addRentalBtn
             // 
-            this.button3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(250)))), ((int)(((byte)(137)))), ((int)(((byte)(19)))));
-            this.button3.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.button3.Font = new System.Drawing.Font("Dubai Medium", 7F, System.Drawing.FontStyle.Bold);
-            this.button3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(225)))), ((int)(((byte)(222)))), ((int)(((byte)(203)))));
-            this.button3.Location = new System.Drawing.Point(12, 516);
-            this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(168, 31);
-            this.button3.TabIndex = 4;
-            this.button3.Text = "Додати запис";
-            this.button3.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
-            this.button3.UseVisualStyleBackColor = false;
-            this.button3.Click += new System.EventHandler(this.button3_Click);
+            this.addRentalBtn.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(250)))), ((int)(((byte)(137)))), ((int)(((byte)(19)))));
+            this.addRentalBtn.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.addRentalBtn.Font = new System.Drawing.Font("Dubai Medium", 7F, System.Drawing.FontStyle.Bold);
+            this.addRentalBtn.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(225)))), ((int)(((byte)(222)))), ((int)(((byte)(203)))));
+            this.addRentalBtn.Location = new System.Drawing.Point(12, 516);
+            this.addRentalBtn.Name = "addRentalBtn";
+            this.addRentalBtn.Size = new System.Drawing.Size(168, 31);
+            this.addRentalBtn.TabIndex = 4;
+            this.addRentalBtn.Text = "Додати запис";
+            this.addRentalBtn.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
+            this.addRentalBtn.UseVisualStyleBackColor = false;
+            this.addRentalBtn.Click += new System.EventHandler(this.addRentalBtn_Click);
             // 
             // button4
             // 
@@ -149,7 +149,7 @@ namespace kurs
             this.Controls.Add(this.butShowInst);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.button4);
-            this.Controls.Add(this.button3);
+            this.Controls.Add(this.addRentalBtn);
             this.Controls.Add(this.rentalDataGrid);
             this.Controls.Add(this.label1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
@@ -168,7 +168,7 @@ namespace kurs
 
         private System.Windows.Forms.Button button4;
 
-        private System.Windows.Forms.Button button3;
+        private System.Windows.Forms.Button addRentalBtn;
 
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.DataGridView rentalDataGrid;

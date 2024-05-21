@@ -14,6 +14,7 @@ namespace kurs
         private MongoClient client;
         private IMongoDatabase db;
         private IMongoCollection<Client> collection;
+        public event EventHandler<ClientSelectedEventArgs> ClientSelected; 
 
         const string connectionString = "mongodb+srv://v:qwe12@cluster0.fm9se2l.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0";
 
@@ -81,5 +82,27 @@ namespace kurs
             AddClient cl = new AddClient(this);
             cl.ShowDialog();
         }
+
+        private void clientDataGrid_CellDoubleClick(object sender, DataGridViewCellEventArgs e)
+        {
+            if (clientDataGrid.CurrentRow != null)
+            {
+                string clientName = clientDataGrid.CurrentRow.Cells["Name"].Value.ToString();
+            
+                ClientSelected?.Invoke(this, new ClientSelectedEventArgs(clientName));
+
+                this.Close();
+            }
+        }
+    }
+}
+
+public class ClientSelectedEventArgs : EventArgs
+{
+    public string SelectedClientName { get; set; }
+
+    public ClientSelectedEventArgs(string name)
+    {
+        SelectedClientName = name;
     }
 }

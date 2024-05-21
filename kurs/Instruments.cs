@@ -13,6 +13,8 @@ namespace kurs
         private MongoClient client;
         private IMongoDatabase db;
         private IMongoCollection<Instrument> collection;
+        
+        public event EventHandler<InstrSelectedEventArgs> InstrSelected; 
 
         const string connectionString = "mongodb+srv://v:qwe12@cluster0.fm9se2l.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0";
 
@@ -92,5 +94,27 @@ namespace kurs
         {
             throw new System.NotImplementedException();
         }
+
+        private void instrDataGrid_CellDoubleClick(object sender, DataGridViewCellEventArgs e)
+        {
+            if (instrDataGrid.CurrentRow != null)
+            {
+                string instName = instrDataGrid.CurrentRow.Cells["InstName"].Value.ToString();
+            
+                InstrSelected?.Invoke(this, new InstrSelectedEventArgs(instName));
+
+                this.Close();
+            }
+        }
+    }
+}
+
+public class InstrSelectedEventArgs : EventArgs
+{
+    public string SelectedInstrName { get; set; }
+
+    public InstrSelectedEventArgs(string name)
+    {
+        SelectedInstrName = name;
     }
 }

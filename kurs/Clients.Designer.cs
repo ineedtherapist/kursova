@@ -109,6 +109,7 @@ namespace kurs
             this.clientDataGrid.RowTemplate.Height = 24;
             this.clientDataGrid.Size = new System.Drawing.Size(756, 432);
             this.clientDataGrid.TabIndex = 15;
+            this.clientDataGrid.CellDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.clientDataGrid_CellDoubleClick);
             // 
             // label1
             // 
