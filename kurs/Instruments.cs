@@ -84,16 +84,7 @@ namespace kurs
             addInstrument aI = new addInstrument(this);
             aI.ShowDialog();
         }
-
-        private void button1_Click(object sender, EventArgs e)
-        {
-            throw new System.NotImplementedException();
-        }
-
-        private void button4_Click(object sender, EventArgs e)
-        {
-            throw new System.NotImplementedException();
-        }
+        
 
         private void instrDataGrid_CellDoubleClick(object sender, DataGridViewCellEventArgs e)
         {

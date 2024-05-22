@@ -10,6 +10,8 @@ namespace kurs
     public partial class Clients : Form
     {
         private Rentals r;
+        
+        private bool choose;
 
         private MongoClient client;
         private IMongoDatabase db;
@@ -41,6 +43,8 @@ namespace kurs
             InitializeComponent();
             r = ren;
 
+            this.choose = choose;
+            
             client = new MongoClient(connectionString);
             db = client.GetDatabase("kurs");
             collection = db.GetCollection<Client>("clients");
@@ -85,14 +89,32 @@ namespace kurs
 
         private void clientDataGrid_CellDoubleClick(object sender, DataGridViewCellEventArgs e)
         {
-            if (clientDataGrid.CurrentRow != null)
+            if (choose == false)
             {
-                string clientName = clientDataGrid.CurrentRow.Cells["Name"].Value.ToString();
-            
-                ClientSelected?.Invoke(this, new ClientSelectedEventArgs(clientName));
-
-                this.Close();
+                if (e.RowIndex >= 0)
+                {
+                    var updateclient = clientDataGrid.Rows[e.RowIndex].DataBoundItem as Client;
+                    updateClient uc = new updateClient(this, updateclient);
+                    uc.ShowDialog();
+                    RefreshClients();
+                }
             }
+            else
+            {
+                if (clientDataGrid.CurrentRow != null)
+                {
+                    string clientName = clientDataGrid.CurrentRow.Cells["Name"].Value.ToString();
+            
+                    ClientSelected?.Invoke(this, new ClientSelectedEventArgs(clientName));
+
+                    this.Close();
+                }
+            }
+        }
+
+        private void Clients_Load(object sender, EventArgs e)
+        {
+            throw new System.NotImplementedException();
         }
     }
 }
