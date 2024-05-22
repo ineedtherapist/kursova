@@ -61,7 +61,7 @@ namespace kurs
             this.addCliebtn.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.addCliebtn.Font = new System.Drawing.Font("Dubai Medium", 7F, System.Drawing.FontStyle.Bold);
             this.addCliebtn.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(225)))), ((int)(((byte)(222)))), ((int)(((byte)(203)))));
-            this.addCliebtn.Location = new System.Drawing.Point(12, 519);
+            this.addCliebtn.Location = new System.Drawing.Point(12, 516);
             this.addCliebtn.Name = "addCliebtn";
             this.addCliebtn.Size = new System.Drawing.Size(182, 31);
             this.addCliebtn.TabIndex = 16;
