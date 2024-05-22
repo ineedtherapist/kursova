@@ -1,9 +1,5 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
 using System.Windows.Forms;
-using MongoDB.Bson;
-using MongoDB.Bson.Serialization.Attributes;
 using MongoDB.Driver;
 
 namespace kurs
@@ -11,6 +7,9 @@ namespace kurs
     public partial class updateClient : Form
     {
         public Clients cli;
+        
+        private bool choose;
+        
         public Clients.Client updateclient;
         private MongoClient client;
         private IMongoDatabase db;

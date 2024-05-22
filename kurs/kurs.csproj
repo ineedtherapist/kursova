@@ -188,6 +188,12 @@
         <Compile Include="updateClient.Designer.cs">
           <DependentUpon>updateClient.cs</DependentUpon>
         </Compile>
+        <Compile Include="updateInstrument.cs">
+          <SubType>Form</SubType>
+        </Compile>
+        <Compile Include="updateInstrument.Designer.cs">
+          <DependentUpon>updateInstrument.cs</DependentUpon>
+        </Compile>
         <EmbeddedResource Include="AddClient.resx">
           <DependentUpon>AddClient.cs</DependentUpon>
         </EmbeddedResource>
@@ -220,6 +226,9 @@
         </EmbeddedResource>
         <EmbeddedResource Include="updateClient.resx">
           <DependentUpon>updateClient.cs</DependentUpon>
+        </EmbeddedResource>
+        <EmbeddedResource Include="updateInstrument.resx">
+          <DependentUpon>updateInstrument.cs</DependentUpon>
         </EmbeddedResource>
         <None Include="packages.config" />
         <None Include="Properties\Settings.settings">

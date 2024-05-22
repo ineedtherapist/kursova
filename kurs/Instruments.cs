@@ -10,6 +10,9 @@ namespace kurs
     public partial class Instruments : Form
     {
         public Rentals r;
+        
+        private bool choose;
+        
         private MongoClient client;
         private IMongoDatabase db;
         private IMongoCollection<Instrument> collection;
@@ -40,6 +43,8 @@ namespace kurs
         {
             InitializeComponent();
             r = ren;
+            
+            this.choose = choose;
 
             client = new MongoClient(connectionString);
             db = client.GetDatabase("kurs");
@@ -88,13 +93,26 @@ namespace kurs
 
         private void instrDataGrid_CellDoubleClick(object sender, DataGridViewCellEventArgs e)
         {
-            if (instrDataGrid.CurrentRow != null)
+            if (choose == false)
             {
-                string instName = instrDataGrid.CurrentRow.Cells["InstName"].Value.ToString();
+                if (e.RowIndex >= 0)
+                {
+                    var updateiinstrument = instrDataGrid.Rows[e.RowIndex].DataBoundItem as Instrument;
+                    updateInstrument uc = new updateInstrument(this, updateiinstrument);
+                    uc.ShowDialog();
+                    RefreshInstruments();
+                }
+            }
+            else
+            {
+                if (instrDataGrid.CurrentRow != null)
+                {
+                    string instName = instrDataGrid.CurrentRow.Cells["InstName"].Value.ToString();
             
-                InstrSelected?.Invoke(this, new InstrSelectedEventArgs(instName));
+                    InstrSelected?.Invoke(this, new InstrSelectedEventArgs(instName));
 
-                this.Close();
+                    this.Close();
+                }  
             }
         }
     }

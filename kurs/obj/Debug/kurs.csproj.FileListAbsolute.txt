@@ -70,3 +70,4 @@ C:\Users\Lenovo\Desktop\kurs\kurs\obj\Debug\kurs.addInstrument.resources
 C:\Users\Lenovo\Desktop\kurs\kurs\obj\Debug\kurs.AddClient.resources
 C:\Users\Lenovo\Desktop\kurs\kurs\obj\Debug\kurs.addRental.resources
 C:\Users\Lenovo\Desktop\kurs\kurs\obj\Debug\kurs.updateClient.resources
+C:\Users\Lenovo\Desktop\kurs\kurs\obj\Debug\kurs.updateInstrument.resources

@@ -111,11 +111,7 @@ namespace kurs
                 }
             }
         }
-
-        private void Clients_Load(object sender, EventArgs e)
-        {
-            throw new System.NotImplementedException();
-        }
+        
     }
 }
 

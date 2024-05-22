@@ -137,7 +137,10 @@ namespace kurs
             this.Controls.Add(this.labl2);
             this.Controls.Add(this.labl3);
             this.Controls.Add(this.UpdClieBtn);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
+            this.MaximizeBox = false;
             this.Name = "updateClient";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Змінити клієнта";
             this.ResumeLayout(false);
             this.PerformLayout();
