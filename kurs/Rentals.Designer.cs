@@ -75,7 +75,7 @@ namespace kurs
             this.addRentalBtn.Name = "addRentalBtn";
             this.addRentalBtn.Size = new System.Drawing.Size(168, 31);
             this.addRentalBtn.TabIndex = 4;
-            this.addRentalBtn.Text = "Додати запис";
+            this.addRentalBtn.Text = "Додати замовлення";
             this.addRentalBtn.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
             this.addRentalBtn.UseVisualStyleBackColor = false;
             this.addRentalBtn.Click += new System.EventHandler(this.addRentalBtn_Click);
@@ -137,7 +137,7 @@ namespace kurs
             this.MaximizeBox = false;
             this.Name = "Rentals";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "Оренди";
+            this.Text = "Замовлення";
             ((System.ComponentModel.ISupportInitialize)(this.rentalDataGrid)).EndInit();
             this.ResumeLayout(false);
         }

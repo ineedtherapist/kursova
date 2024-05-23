@@ -10,13 +10,13 @@ namespace kurs
     public partial class Rentals : Form
     {
         public Enter en;
-        
+
         private bool choose;
 
         private MongoClient client;
         private IMongoDatabase db;
         private IMongoCollection<Rental> collection;
-        
+
 
         const string connectionString = "mongodb+srv://v:qwe12@cluster0.fm9se2l.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0";
 
@@ -25,13 +25,15 @@ namespace kurs
             [BsonId]
             [BsonRepresentation(BsonType.ObjectId)]
             public string Id { get; set; }
+
             public string InstName { get; set; }
             public string ClientName { get; set; }
             public string Price { get; set; }
             public string Date_start { get; set; }
             public string Date_end { get; set; }
 
-            public Rental(string id, string instName, string clientName, string price, string date_start, string date_end)
+            public Rental(string id, string instName, string clientName, string price, string date_start,
+                string date_end)
             {
                 this.Id = id;
                 this.InstName = instName;
@@ -40,18 +42,17 @@ namespace kurs
                 this.Date_start = date_start;
                 this.Date_end = date_end;
             }
-            
         }
 
-        public Rentals(Enter e , Instruments inst, Clients clie)
+        public Rentals(Enter e, Instruments inst, Clients clie, bool choose = false)
         {
             InitializeComponent();
             en = e;
-            
+
             client = new MongoClient(connectionString);
             db = client.GetDatabase("kurs");
             collection = db.GetCollection<Rental>("rentals");
-            
+
             RefreshRentals();
 
             rentalDataGrid.Columns["Id"].Visible = false;
@@ -60,7 +61,7 @@ namespace kurs
             {
                 { "ClientName", "Ім'я клієнта" },
                 { "InstName", "Назва інструмента" },
-                { "Price", "Ціна за місяць"},
+                { "Price", "Ціна за місяць" },
                 { "Date_start", "Початок оренди" },
                 { "Date_end", "Кінець оренди" }
             };
@@ -73,7 +74,7 @@ namespace kurs
                 }
             }
         }
-        
+
         public void RefreshRentals()
         {
             var rentals = collection.Find(new BsonDocument()).ToList();
@@ -91,14 +92,14 @@ namespace kurs
                     RefreshRentals();
                 }
             }
-            
+
         }
 
         private void butShowInst_Click(object sender, EventArgs e)
         {
-                Instruments i = new Instruments(this);
-                i.Show();
-                this.Hide();
+            Instruments i = new Instruments(this);
+            i.Show();
+            this.Hide();
         }
 
         private void bntShowClien_Click(object sender, EventArgs e)
@@ -113,6 +114,5 @@ namespace kurs
             addRental re = new addRental(this);
             re.ShowDialog();
         }
-        
     }
 }

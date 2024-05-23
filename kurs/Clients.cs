@@ -38,7 +38,7 @@ namespace kurs
             }
         }
 
-        public Clients(Rentals ren)
+        public Clients(Rentals ren, bool choose = false)
         {
             InitializeComponent();
             r = ren;

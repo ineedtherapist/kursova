@@ -87,7 +87,7 @@ namespace kurs
             }
             else
             {
-                MessageBox.Show("інструмент не вибрано.");
+                MessageBox.Show("Інструмент не вибрано.");
             }
         }
     }

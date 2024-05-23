@@ -41,8 +41,8 @@ namespace kurs
             this.Date_endAdd = new System.Windows.Forms.TextBox();
             this.PriceUpd = new System.Windows.Forms.TextBox();
             this.Date_startUpd = new System.Windows.Forms.TextBox();
-            this.updClieName = new System.Windows.Forms.TextBox();
-            this.updInstName = new System.Windows.Forms.TextBox();
+            this.btnUpdInst = new System.Windows.Forms.Button();
+            this.btnUpdClie = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // Deletinst
@@ -51,12 +51,13 @@ namespace kurs
             this.Deletinst.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.Deletinst.Font = new System.Drawing.Font("Dubai Medium", 7F, System.Drawing.FontStyle.Bold);
             this.Deletinst.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(225)))), ((int)(((byte)(222)))), ((int)(((byte)(203)))));
-            this.Deletinst.Location = new System.Drawing.Point(110, 265);
+            this.Deletinst.Location = new System.Drawing.Point(97, 268);
             this.Deletinst.Name = "Deletinst";
-            this.Deletinst.Size = new System.Drawing.Size(159, 36);
+            this.Deletinst.Size = new System.Drawing.Size(197, 36);
             this.Deletinst.TabIndex = 31;
-            this.Deletinst.Text = "Видалити клієнта";
+            this.Deletinst.Text = "Видалити замовлення";
             this.Deletinst.UseVisualStyleBackColor = false;
+            this.Deletinst.Click += new System.EventHandler(this.Deletinst_Click);
             // 
             // UpdinstBtn
             // 
@@ -64,11 +65,11 @@ namespace kurs
             this.UpdinstBtn.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.UpdinstBtn.Font = new System.Drawing.Font("Dubai Medium", 7F, System.Drawing.FontStyle.Bold);
             this.UpdinstBtn.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(225)))), ((int)(((byte)(222)))), ((int)(((byte)(203)))));
-            this.UpdinstBtn.Location = new System.Drawing.Point(110, 223);
+            this.UpdinstBtn.Location = new System.Drawing.Point(97, 226);
             this.UpdinstBtn.Name = "UpdinstBtn";
-            this.UpdinstBtn.Size = new System.Drawing.Size(159, 36);
+            this.UpdinstBtn.Size = new System.Drawing.Size(197, 36);
             this.UpdinstBtn.TabIndex = 30;
-            this.UpdinstBtn.Text = "Змінити клієнта";
+            this.UpdinstBtn.Text = "Змінити замовлення";
             this.UpdinstBtn.UseVisualStyleBackColor = false;
             this.UpdinstBtn.Click += new System.EventHandler(this.UpdinstBtn_Click);
             // 
@@ -138,19 +139,23 @@ namespace kurs
             this.Date_startUpd.Size = new System.Drawing.Size(124, 22);
             this.Date_startUpd.TabIndex = 34;
             // 
-            // updClieName
+            // btnUpdInst
             // 
-            this.updClieName.Location = new System.Drawing.Point(239, 59);
-            this.updClieName.Name = "updClieName";
-            this.updClieName.Size = new System.Drawing.Size(124, 22);
-            this.updClieName.TabIndex = 42;
+            this.btnUpdInst.Location = new System.Drawing.Point(239, 18);
+            this.btnUpdInst.Name = "btnUpdInst";
+            this.btnUpdInst.Size = new System.Drawing.Size(124, 26);
+            this.btnUpdInst.TabIndex = 42;
+            this.btnUpdInst.UseVisualStyleBackColor = true;
+            this.btnUpdInst.Click += new System.EventHandler(this.btnUpdInst_Click);
             // 
-            // updInstName
+            // btnUpdClie
             // 
-            this.updInstName.Location = new System.Drawing.Point(239, 16);
-            this.updInstName.Name = "updInstName";
-            this.updInstName.Size = new System.Drawing.Size(124, 22);
-            this.updInstName.TabIndex = 43;
+            this.btnUpdClie.Location = new System.Drawing.Point(239, 58);
+            this.btnUpdClie.Name = "btnUpdClie";
+            this.btnUpdClie.Size = new System.Drawing.Size(124, 26);
+            this.btnUpdClie.TabIndex = 43;
+            this.btnUpdClie.UseVisualStyleBackColor = true;
+            this.btnUpdClie.Click += new System.EventHandler(this.btnUpdClie_Click);
             // 
             // updateRental
             // 
@@ -158,8 +163,8 @@ namespace kurs
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(225)))), ((int)(((byte)(222)))), ((int)(((byte)(203)))));
             this.ClientSize = new System.Drawing.Size(398, 322);
-            this.Controls.Add(this.updInstName);
-            this.Controls.Add(this.updClieName);
+            this.Controls.Add(this.btnUpdClie);
+            this.Controls.Add(this.btnUpdInst);
             this.Controls.Add(this.label5);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.label3);
@@ -179,8 +184,8 @@ namespace kurs
             this.PerformLayout();
         }
 
-        private System.Windows.Forms.TextBox updClieName;
-        private System.Windows.Forms.TextBox updInstName;
+        private System.Windows.Forms.Button btnUpdInst;
+        private System.Windows.Forms.Button btnUpdClie;
 
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Label label4;

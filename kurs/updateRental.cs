@@ -26,8 +26,8 @@ namespace kurs
             db = client.GetDatabase("kurs");
             collection = db.GetCollection<Rentals.Rental>("rentals");
             
-            updInstName.Text = updaterental.InstName;
-            updClieName.Text = updaterental.ClientName;
+            btnUpdInst.Text = updaterental.InstName;
+            btnUpdClie.Text = updaterental.ClientName;
             PriceUpd.Text = updaterental.Price;
             Date_startUpd.Text = updaterental.Date_start;
             Date_endAdd.Text = updaterental.Date_end;
@@ -35,8 +35,8 @@ namespace kurs
 
         private void UpdinstBtn_Click(object sender, EventArgs e)
         {
-            string instName = updInstName.Text;
-            string clientName = updClieName.Text;
+            string instName = btnUpdInst.Text;
+            string clientName = btnUpdClie.Text;
             string price = PriceUpd.Text;
             string date_start = Date_startUpd.Text;
             string date_end = Date_endAdd.Text;
@@ -53,16 +53,72 @@ namespace kurs
         
             if (updateResult.ModifiedCount > 0)
             {
-                MessageBox.Show("Дані про оренду успішно оновлено.");
+                MessageBox.Show("Дані про замовлення успішно оновлено.");
             }
             else
             {
-                MessageBox.Show("Не вдалось оновити дані про оренду.");
+                MessageBox.Show("Не вдалось оновити дані про замовлення.");
             }
         
             ren.RefreshRentals();
 
             this.Close();
+        }
+
+        private void Deletinst_Click(object sender, EventArgs e)
+        {
+            if (updaterental != null)
+            {
+                if (MessageBox.Show("Ви впевнені, що хочете видалити дані про замовлення?",
+                        "Підтвердження видалення",
+                        MessageBoxButtons.YesNo) == DialogResult.Yes)
+                {
+                    var filter = Builders<Rentals.Rental>.Filter.Eq(c => c.Id, updaterental.Id);
+                    var deleteResult = collection.DeleteOne(filter);
+                
+                    if (deleteResult.DeletedCount > 0)
+                    {
+                        MessageBox.Show("Дані про замовлення успішно видалено.");
+
+                    }
+                    else
+                    {
+                        MessageBox.Show("Не вдалось видалити дані про замовлення.");
+                    }
+
+                    ren.RefreshRentals();
+
+                    this.Close();
+                }
+            }
+            else
+            {
+                MessageBox.Show("Замовлення не вибрано.");
+            }
+        }
+
+        private void btnUpdClie_Click(object sender, EventArgs e)
+        {
+            Clients clients = new Clients(null);
+            clients.ClientSelected += ClientsForm_ClientSelected;
+            clients.ShowDialog();
+        }
+        
+        private void btnUpdInst_Click(object sender, EventArgs e)
+        {
+            Instruments instruments = new Instruments(null);
+            instruments.InstrSelected += InstrForm_InstrSelected;
+            instruments.ShowDialog();
+        }
+        
+        private void ClientsForm_ClientSelected(object sender, ClientSelectedEventArgs e)
+        {                                                                                                                                                           
+            btnUpdClie.Text = e.SelectedClientName;
+        }
+
+        private void InstrForm_InstrSelected(object sender, InstrSelectedEventArgs e)                                                                                   
+        {
+            btnUpdInst.Text = e.SelectedInstrName;
         }
     }
 }

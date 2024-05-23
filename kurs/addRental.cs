@@ -51,14 +51,14 @@ namespace kurs
 
         private void btnAddClien_Click(object sender, EventArgs e)
         {
-            Clients clients = new Clients(null);
+            Clients clients = new Clients(null, true);
             clients.ClientSelected += ClientsForm_ClientSelected;
             clients.ShowDialog();
         }
         
         private void btnAddInst_Click(object sender, EventArgs e)
         {
-            Instruments instruments = new Instruments(null);
+            Instruments instruments = new Instruments(null, true);
             instruments.InstrSelected += InstrForm_InstrSelected;
             instruments.ShowDialog();
         }

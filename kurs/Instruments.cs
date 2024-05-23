@@ -39,7 +39,7 @@ namespace kurs
             }
         }
 
-        public Instruments(Rentals ren)
+        public Instruments(Rentals ren, bool choose = false)
         {
             InitializeComponent();
             r = ren;

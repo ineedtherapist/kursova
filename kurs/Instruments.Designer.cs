@@ -47,7 +47,7 @@ namespace kurs
             this.btnAddInstr.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(225)))), ((int)(((byte)(222)))), ((int)(((byte)(203)))));
             this.btnAddInstr.Location = new System.Drawing.Point(12, 516);
             this.btnAddInstr.Name = "btnAddInstr";
-            this.btnAddInstr.Size = new System.Drawing.Size(182, 31);
+            this.btnAddInstr.Size = new System.Drawing.Size(200, 31);
             this.btnAddInstr.TabIndex = 9;
             this.btnAddInstr.Text = "Додати інструмент";
             this.btnAddInstr.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
@@ -98,9 +98,9 @@ namespace kurs
             // label2
             // 
             this.label2.Font = new System.Drawing.Font("Dubai Medium", 7F, System.Drawing.FontStyle.Bold);
-            this.label2.Location = new System.Drawing.Point(200, 513);
+            this.label2.Location = new System.Drawing.Point(212, 513);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(568, 45);
+            this.label2.Size = new System.Drawing.Size(556, 45);
             this.label2.TabIndex = 22;
             this.label2.Text = "Для редагування / видалення інформації про інструмент\r\nнатисніть двічі по вибрано" + "му інструменту";
             this.label2.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
