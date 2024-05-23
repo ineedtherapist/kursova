@@ -68,10 +68,10 @@ namespace kurs
             this.btnAddRental.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.btnAddRental.Font = new System.Drawing.Font("Dubai Medium", 7F, System.Drawing.FontStyle.Bold);
             this.btnAddRental.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(225)))), ((int)(((byte)(222)))), ((int)(((byte)(203)))));
-            this.btnAddRental.Location = new System.Drawing.Point(109, 248);
+            this.btnAddRental.Location = new System.Drawing.Point(109, 252);
             this.btnAddRental.Name = "btnAddRental";
             this.btnAddRental.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.btnAddRental.Size = new System.Drawing.Size(173, 51);
+            this.btnAddRental.Size = new System.Drawing.Size(169, 36);
             this.btnAddRental.TabIndex = 2;
             this.btnAddRental.Text = "Додати замовлення";
             this.btnAddRental.UseVisualStyleBackColor = false;
@@ -148,7 +148,7 @@ namespace kurs
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(225)))), ((int)(((byte)(222)))), ((int)(((byte)(203)))));
-            this.ClientSize = new System.Drawing.Size(410, 334);
+            this.ClientSize = new System.Drawing.Size(410, 313);
             this.Controls.Add(this.label5);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.label3);
