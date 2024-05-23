@@ -10,6 +10,8 @@ namespace kurs
     public partial class Rentals : Form
     {
         public Enter en;
+        
+        private bool choose;
 
         private MongoClient client;
         private IMongoDatabase db;
@@ -77,7 +79,20 @@ namespace kurs
             var rentals = collection.Find(new BsonDocument()).ToList();
             rentalDataGrid.DataSource = rentals;
         }
-    
+
+        private void rentalDataGrid_CellDoubleClick(object sender, DataGridViewCellEventArgs e)
+        {
+            {
+                if (e.RowIndex >= 0)
+                {
+                    var updaterental = rentalDataGrid.Rows[e.RowIndex].DataBoundItem as Rental;
+                    updateRental uc = new updateRental(this, updaterental);
+                    uc.ShowDialog();
+                    RefreshRentals();
+                }
+            }
+            
+        }
 
         private void butShowInst_Click(object sender, EventArgs e)
         {
@@ -98,5 +113,6 @@ namespace kurs
             addRental re = new addRental(this);
             re.ShowDialog();
         }
+        
     }
 }

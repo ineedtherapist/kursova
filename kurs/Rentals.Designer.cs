@@ -34,10 +34,9 @@ namespace kurs
             this.label1 = new System.Windows.Forms.Label();
             this.rentalDataGrid = new System.Windows.Forms.DataGridView();
             this.addRentalBtn = new System.Windows.Forms.Button();
-            this.button4 = new System.Windows.Forms.Button();
-            this.button1 = new System.Windows.Forms.Button();
             this.butShowInst = new System.Windows.Forms.Button();
             this.butShowClin = new System.Windows.Forms.Button();
+            this.label2 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.rentalDataGrid)).BeginInit();
             this.SuspendLayout();
             // 
@@ -64,6 +63,7 @@ namespace kurs
             this.rentalDataGrid.RowTemplate.Height = 24;
             this.rentalDataGrid.Size = new System.Drawing.Size(756, 432);
             this.rentalDataGrid.TabIndex = 1;
+            this.rentalDataGrid.CellDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.rentalDataGrid_CellDoubleClick);
             // 
             // addRentalBtn
             // 
@@ -79,34 +79,6 @@ namespace kurs
             this.addRentalBtn.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
             this.addRentalBtn.UseVisualStyleBackColor = false;
             this.addRentalBtn.Click += new System.EventHandler(this.addRentalBtn_Click);
-            // 
-            // button4
-            // 
-            this.button4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(250)))), ((int)(((byte)(137)))), ((int)(((byte)(19)))));
-            this.button4.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.button4.Font = new System.Drawing.Font("Dubai Medium", 7F, System.Drawing.FontStyle.Bold);
-            this.button4.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(225)))), ((int)(((byte)(222)))), ((int)(((byte)(203)))));
-            this.button4.Location = new System.Drawing.Point(360, 516);
-            this.button4.Name = "button4";
-            this.button4.Size = new System.Drawing.Size(168, 31);
-            this.button4.TabIndex = 5;
-            this.button4.Text = "Видалити запис";
-            this.button4.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
-            this.button4.UseVisualStyleBackColor = false;
-            // 
-            // button1
-            // 
-            this.button1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(250)))), ((int)(((byte)(137)))), ((int)(((byte)(19)))));
-            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.button1.Font = new System.Drawing.Font("Dubai Medium", 7F, System.Drawing.FontStyle.Bold);
-            this.button1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(225)))), ((int)(((byte)(222)))), ((int)(((byte)(203)))));
-            this.button1.Location = new System.Drawing.Point(186, 516);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(168, 31);
-            this.button1.TabIndex = 6;
-            this.button1.Text = "Змінити запис";
-            this.button1.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
-            this.button1.UseVisualStyleBackColor = false;
             // 
             // butShowInst
             // 
@@ -139,16 +111,25 @@ namespace kurs
             this.butShowClin.UseVisualStyleBackColor = false;
             this.butShowClin.Click += new System.EventHandler(this.bntShowClien_Click);
             // 
+            // label2
+            // 
+            this.label2.Font = new System.Drawing.Font("Dubai Medium", 7F, System.Drawing.FontStyle.Bold);
+            this.label2.Location = new System.Drawing.Point(186, 513);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(582, 45);
+            this.label2.TabIndex = 23;
+            this.label2.Text = "Для редагування / видалення інформації про оренду\r\nнатисніть двічі по вибраній ор" + "енді";
+            this.label2.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
             // Rentals
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(225)))), ((int)(((byte)(222)))), ((int)(((byte)(203)))));
             this.ClientSize = new System.Drawing.Size(780, 559);
+            this.Controls.Add(this.label2);
             this.Controls.Add(this.butShowClin);
             this.Controls.Add(this.butShowInst);
-            this.Controls.Add(this.button1);
-            this.Controls.Add(this.button4);
             this.Controls.Add(this.addRentalBtn);
             this.Controls.Add(this.rentalDataGrid);
             this.Controls.Add(this.label1);
@@ -161,12 +142,10 @@ namespace kurs
             this.ResumeLayout(false);
         }
 
+        private System.Windows.Forms.Label label2;
+
         private System.Windows.Forms.Button butShowInst;
         private System.Windows.Forms.Button butShowClin;
-
-        private System.Windows.Forms.Button button1;
-
-        private System.Windows.Forms.Button button4;
 
         private System.Windows.Forms.Button addRentalBtn;
 

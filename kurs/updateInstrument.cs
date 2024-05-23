@@ -10,7 +10,7 @@ namespace kurs
         
         private bool choose;
         
-        public Instruments.Instrument updateiinstrument;
+        public Instruments.Instrument updateinstrument;
         private MongoClient client;
         private IMongoDatabase db;
         private IMongoCollection<Instruments.Instrument> collection;
@@ -19,16 +19,16 @@ namespace kurs
         {
             InitializeComponent();
             inst = i;
-            updateiinstrument = person;
+            updateinstrument = person;
             
             string connectionString = "mongodb+srv://v:qwe12@cluster0.fm9se2l.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0";
             client = new MongoClient(connectionString);
             db = client.GetDatabase("kurs");
             collection = db.GetCollection<Instruments.Instrument>("instruments");
             
-            InstrNameUpd.Text = updateiinstrument.InstName;
-            DescInstrUpd.Text = updateiinstrument.Desc;
-            PriceInstrUpd.Text = updateiinstrument.Price;
+            InstrNameUpd.Text = updateinstrument.InstName;
+            DescInstrUpd.Text = updateinstrument.Desc;
+            PriceInstrUpd.Text = updateinstrument.Price;
         }
 
         private void UpdinstBtn_Click(object sender, EventArgs e)
@@ -37,7 +37,7 @@ namespace kurs
             string desc = DescInstrUpd.Text;
             string price = PriceInstrUpd.Text;
 
-            var filter = Builders<Instruments.Instrument>.Filter.Eq(c => c.Id, updateiinstrument.Id);
+            var filter = Builders<Instruments.Instrument>.Filter.Eq(c => c.Id, updateinstrument.Id);
             var update = Builders<Instruments.Instrument>.Update
                 .Set(c => c.InstName, instName)
                 .Set(c => c.Desc, desc)
@@ -61,13 +61,13 @@ namespace kurs
 
         private void Deletinst_Click(object sender, EventArgs e)
         {
-            if (updateiinstrument != null)
+            if (updateinstrument != null)
             {
                 if (MessageBox.Show("Ви впевнені, що хочете видалити дані про інструмента?",
                         "Підтвердження видалення",
                         MessageBoxButtons.YesNo) == DialogResult.Yes)
                 {
-                    var filter = Builders<Instruments.Instrument>.Filter.Eq(c => c.Id, updateiinstrument.Id);
+                    var filter = Builders<Instruments.Instrument>.Filter.Eq(c => c.Id, updateinstrument.Id);
                     var deleteResult = collection.DeleteOne(filter);
                 
                     if (deleteResult.DeletedCount > 0)

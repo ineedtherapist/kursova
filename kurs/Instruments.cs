@@ -97,8 +97,8 @@ namespace kurs
             {
                 if (e.RowIndex >= 0)
                 {
-                    var updateiinstrument = instrDataGrid.Rows[e.RowIndex].DataBoundItem as Instrument;
-                    updateInstrument uc = new updateInstrument(this, updateiinstrument);
+                    var updateinstrument = instrDataGrid.Rows[e.RowIndex].DataBoundItem as Instrument;
+                    updateInstrument uc = new updateInstrument(this, updateinstrument);
                     uc.ShowDialog();
                     RefreshInstruments();
                 }
