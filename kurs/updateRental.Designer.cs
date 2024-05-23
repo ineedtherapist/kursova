@@ -80,7 +80,7 @@ namespace kurs
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(183, 23);
             this.label5.TabIndex = 41;
-            this.label5.Text = "Назва інструмента :";
+            this.label5.Text = "Оберіть інструмент :";
             // 
             // label4
             // 
@@ -89,7 +89,7 @@ namespace kurs
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(183, 23);
             this.label4.TabIndex = 40;
-            this.label4.Text = "Клієнт :";
+            this.label4.Text = "Оберіть клієнта :";
             // 
             // label3
             // 

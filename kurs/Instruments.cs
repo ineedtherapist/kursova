@@ -58,7 +58,7 @@ namespace kurs
             {
                 { "InstName", "Назва інструмента" },
                 { "Desc", "Опис" },
-                { "Price", "Ціна за місяць" }
+                { "Price", "Ціна за місяць, $" }
             };
 
             foreach (var columnHeader in columnHeaders)

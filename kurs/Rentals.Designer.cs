@@ -48,9 +48,9 @@ namespace kurs
             this.label1.ForeColor = System.Drawing.Color.Black;
             this.label1.Location = new System.Drawing.Point(12, 55);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(287, 20);
+            this.label1.Size = new System.Drawing.Size(188, 20);
             this.label1.TabIndex = 0;
-            this.label1.Text = "Інструменти доступні для оренди :";
+            this.label1.Text = "Активні замовлення:";
             this.label1.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
             // 
             // rentalDataGrid
@@ -73,7 +73,7 @@ namespace kurs
             this.addRentalBtn.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(225)))), ((int)(((byte)(222)))), ((int)(((byte)(203)))));
             this.addRentalBtn.Location = new System.Drawing.Point(12, 516);
             this.addRentalBtn.Name = "addRentalBtn";
-            this.addRentalBtn.Size = new System.Drawing.Size(168, 31);
+            this.addRentalBtn.Size = new System.Drawing.Size(188, 31);
             this.addRentalBtn.TabIndex = 4;
             this.addRentalBtn.Text = "Додати замовлення";
             this.addRentalBtn.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
@@ -114,11 +114,11 @@ namespace kurs
             // label2
             // 
             this.label2.Font = new System.Drawing.Font("Dubai Medium", 7F, System.Drawing.FontStyle.Bold);
-            this.label2.Location = new System.Drawing.Point(186, 513);
+            this.label2.Location = new System.Drawing.Point(206, 513);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(582, 45);
+            this.label2.Size = new System.Drawing.Size(562, 45);
             this.label2.TabIndex = 23;
-            this.label2.Text = "Для редагування / видалення інформації про оренду\r\nнатисніть двічі по вибраній ор" + "енді";
+            this.label2.Text = "Для редагування / видалення інформації про замовлення\r\nнатисніть двічі по вибрано" + "му замовленню";
             this.label2.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // Rentals

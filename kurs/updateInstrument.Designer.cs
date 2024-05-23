@@ -47,11 +47,11 @@ namespace kurs
             this.Deletinst.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.Deletinst.Font = new System.Drawing.Font("Dubai Medium", 7F, System.Drawing.FontStyle.Bold);
             this.Deletinst.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(225)))), ((int)(((byte)(222)))), ((int)(((byte)(203)))));
-            this.Deletinst.Location = new System.Drawing.Point(96, 169);
+            this.Deletinst.Location = new System.Drawing.Point(76, 169);
             this.Deletinst.Name = "Deletinst";
-            this.Deletinst.Size = new System.Drawing.Size(159, 36);
+            this.Deletinst.Size = new System.Drawing.Size(206, 36);
             this.Deletinst.TabIndex = 29;
-            this.Deletinst.Text = "Видалити клієнта";
+            this.Deletinst.Text = "Видалити інструмент";
             this.Deletinst.UseVisualStyleBackColor = false;
             this.Deletinst.Click += new System.EventHandler(this.Deletinst_Click);
             // 
@@ -61,11 +61,11 @@ namespace kurs
             this.UpdinstBtn.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.UpdinstBtn.Font = new System.Drawing.Font("Dubai Medium", 7F, System.Drawing.FontStyle.Bold);
             this.UpdinstBtn.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(225)))), ((int)(((byte)(222)))), ((int)(((byte)(203)))));
-            this.UpdinstBtn.Location = new System.Drawing.Point(96, 127);
+            this.UpdinstBtn.Location = new System.Drawing.Point(76, 127);
             this.UpdinstBtn.Name = "UpdinstBtn";
-            this.UpdinstBtn.Size = new System.Drawing.Size(159, 36);
+            this.UpdinstBtn.Size = new System.Drawing.Size(206, 36);
             this.UpdinstBtn.TabIndex = 22;
-            this.UpdinstBtn.Text = "Змінити клієнта";
+            this.UpdinstBtn.Text = "Змінити інструмент";
             this.UpdinstBtn.UseVisualStyleBackColor = false;
             this.UpdinstBtn.Click += new System.EventHandler(this.UpdinstBtn_Click);
             // 

@@ -68,10 +68,10 @@ namespace kurs
             this.btnAddRental.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.btnAddRental.Font = new System.Drawing.Font("Dubai Medium", 7F, System.Drawing.FontStyle.Bold);
             this.btnAddRental.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(225)))), ((int)(((byte)(222)))), ((int)(((byte)(203)))));
-            this.btnAddRental.Location = new System.Drawing.Point(109, 252);
+            this.btnAddRental.Location = new System.Drawing.Point(100, 247);
             this.btnAddRental.Name = "btnAddRental";
             this.btnAddRental.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.btnAddRental.Size = new System.Drawing.Size(169, 36);
+            this.btnAddRental.Size = new System.Drawing.Size(206, 36);
             this.btnAddRental.TabIndex = 2;
             this.btnAddRental.Text = "Додати замовлення";
             this.btnAddRental.UseVisualStyleBackColor = false;

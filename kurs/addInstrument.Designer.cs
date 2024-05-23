@@ -46,9 +46,9 @@ namespace kurs
             this.AddInstBtn.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.AddInstBtn.Font = new System.Drawing.Font("Dubai Medium", 7F, System.Drawing.FontStyle.Bold);
             this.AddInstBtn.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(225)))), ((int)(((byte)(222)))), ((int)(((byte)(203)))));
-            this.AddInstBtn.Location = new System.Drawing.Point(109, 141);
+            this.AddInstBtn.Location = new System.Drawing.Point(92, 141);
             this.AddInstBtn.Name = "AddInstBtn";
-            this.AddInstBtn.Size = new System.Drawing.Size(159, 36);
+            this.AddInstBtn.Size = new System.Drawing.Size(191, 36);
             this.AddInstBtn.TabIndex = 0;
             this.AddInstBtn.Text = "Додати інструмент";
             this.AddInstBtn.UseVisualStyleBackColor = false;
